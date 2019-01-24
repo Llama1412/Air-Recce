@@ -10,5 +10,6 @@ foreach ($fileSystemIterator as $fileInfo){
 foreach ($entries as $name) {
     $edited = substr($name, 0, -4   );
     $planes[] = $edited;
-}
+};
+var_dump($planes);
 ?>

@@ -1,7 +1,7 @@
 <html>
 	<head>
         <?php include "planeindex.php";
-        $currentpic = "planes\F-15.png"
+        $currentpic = "planes\F-22.jpg";
         ?>
 
 
@@ -27,8 +27,8 @@
     </head>
 	<body>
         <div class="container">
-            <div id="picdiv">
-                <img src="<?= $currentpic ?>">
+            <div id="picdiv" style="width: 100%; height: 100%;">
+                <img src="<?= $currentpic ?>" style="width: 100%;">
                 <p><?= $currentpic ?></p>
             </div>
         </div>
