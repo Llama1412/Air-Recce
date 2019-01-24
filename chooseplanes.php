@@ -3,11 +3,11 @@
     echo "alert(".sizeof($planes).")";
     $targno = rand(0, sizeof($planes)-1);
     $selection[] = $targno;
-    while (sizeof($selection) < 4) {
-        $generated = rand(0, sizeof($planes));
+    while (sizeof($selection) != 4) {
+        $generated = rand(0, sizeof($planes)-1);
         if ($generated != $targno) {
-            if (in_array($generated, $selection)) {
-                $selection[] = $targno;
+            if (!in_array($generated, $selection)) {
+                $selection[] = $generated;
             };
         };
     };
