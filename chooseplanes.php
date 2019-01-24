@@ -1,12 +1,13 @@
 <?php
     $selection = array();
+    echo "alert(".sizeof($planes).")";
     $targno = rand(0, sizeof($planes)-1);
     $selection[] = $targno;
     while (sizeof($selection) < 4) {
         $generated = rand(0, sizeof($planes));
         if ($generated != $targno) {
-            if (in_array($planes[$generated], $selection)) {
-                $selection[] = $generated;
+            if (in_array($generated, $selection)) {
+                $selection[] = $targno;
             };
         };
     };
