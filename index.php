@@ -18,9 +18,6 @@
 		</nav>
 		<script>session_start()</script>
     </head>
-    <?php
-        include planeindex.php;
-    ?>
 	<body>
 
 
