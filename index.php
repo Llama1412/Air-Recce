@@ -2,9 +2,11 @@
 
 <html>
     <head>
-        <?php include "planeindex.php";
+        <?php 
+            include "planeindex.php";
+            include "scoring.php";
             $currentpic = "planes\F-22.jpg";
-            ?>
+        ?>
         <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <nav class="navbar navbar-inverse">
@@ -16,15 +18,14 @@
                     <li class="">
                         <a href="">
                             <b>Current Score:</b> 
-                            <p class="text-center" id="score">0</p>
+                            <p class="text-center" id="score"><?= $_SESSION["score"] ?></p>
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <script>session_start()</script>
     </head>
-    
+
     <body>
         <div class="container">
             <div id="picdiv" style="width: 100%; height: 100%;">
