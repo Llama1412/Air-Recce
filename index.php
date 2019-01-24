@@ -1,6 +1,12 @@
 <html>
 	<head>
-        <?php include "planeindex.php"; ?>
+        <?php include "planeindex.php";
+        $currentpic = "planes\F-15.png"
+        ?>
+
+
+
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -10,7 +16,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li class="">
 						<a href="">
-							<b>Current Score: </b> 
+							<b>Current Score:</b> 
 							<p class="text-center" id="score">0</p>
 						</a>
 					</li>
@@ -20,10 +26,12 @@
 		<script>session_start()</script>
     </head>
 	<body>
-
-
-
-
+        <div class="container">
+            <div id="picdiv">
+                <img src="<?= $currentpic ?>">
+                <p><?= $currentpic ?></p>
+            </div>
+        </div>
 	</body>
 </html>
 
