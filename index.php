@@ -5,6 +5,7 @@
         <?php 
             include "planeindex.php";
             include "scoring.php";
+            include "chooseplanes.php";
             $currentpic = "planes\F-22.jpg";
         ?>
         <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
@@ -28,11 +29,14 @@
 
     <body>
         <div class="container">
-            <div id="picdiv" style="width: 100%; height: 100%;">
+            <div id="picdiv" style="width: 100%;">
                 <img src="<?= $currentpic ?>" style="width: 100%;">
-                <p><?= $currentpic ?></p>
             </div>
             <div id="buttondiv">
+                <button type="button"><?= $option1 ?></button> 
+                <button type="button"><?= $option2 ?></button>
+                <button type="button"><?= $option3 ?></button>
+                <button type="button"><?= $option4 ?></button>
             </div>
         </div>
     </body>
