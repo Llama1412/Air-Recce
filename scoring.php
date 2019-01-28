@@ -4,6 +4,10 @@
         $_SESSION["score"] = 0;
         $_SESSION["total"] = 0;
     };
+    if (!isset($_SESSION["total"])) {
+        $_SESSION["score"] = 0;
+        $_SESSION["total"] = 0;
+    };
     
     function enterAnswer($answer) {
         if ($_SESSION["correctanswer"] == $answer) {
