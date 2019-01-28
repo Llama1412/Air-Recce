@@ -1,14 +1,18 @@
 <?php
-$fileSystemIterator = new FilesystemIterator('planes');
+    $fileSystemIterator = new FilesystemIterator('planes');
+    
+    $entries = array();
+    $planes = array();
+    foreach ($fileSystemIterator as $fileInfo){
+        $entries[] = $fileInfo->getFilename();
+    };
+    
+    foreach ($entries as $name) {
+        $edited = substr($name, 0, -4);
+        $planes[] = $edited;
+    };
 
-$entries = array();
-$planes = array();
-foreach ($fileSystemIterator as $fileInfo){
-    $entries[] = $fileInfo->getFilename();
-};
+    $_SESSION["planes"] = array();
+    $_SESSION["planes"] = $planes;
+    ?>
 
-foreach ($entries as $name) {
-    $edited = substr($name, 0, -4   );
-    $planes[] = $edited;
-};
-?>
