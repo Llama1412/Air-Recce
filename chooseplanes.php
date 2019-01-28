@@ -1,4 +1,5 @@
 <?php
+    unset($selection);
     $selection = array();
     $targno = rand(0, sizeof($_SESSION["planes"])-1);
     $selection[] = $targno;
