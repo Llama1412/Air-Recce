@@ -22,7 +22,7 @@
                     <li class="">
                         <a href="clearsession.php">
                             <b>Current Score:</b> 
-                            <p class="text-center" id="score"><?= $_SESSION["score"] ?></p>
+                            <p class="text-center" id="score"><?= $_SESSION["score"] ?>/<?= $_SESSION["total"] ?></p>
                         </a>
                     </li>
                 </ul>
