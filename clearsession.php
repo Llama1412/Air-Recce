@@ -1,3 +1,4 @@
 <?php
-session_abort();
+unset($_SESSION["score"]);
+header("Location: /")
 ?>
