@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>Air Recce Trainer</title>
         <?php
             include "scoring.php";
             if (isset($_POST["button"])) {
