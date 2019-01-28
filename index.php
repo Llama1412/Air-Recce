@@ -5,7 +5,7 @@
             if (isset($_POST["button"])) {
                 enterAnswer($_POST["button"]);
                 unset($_POST["button"]);
-            }
+            };
             include "planeindex.php";
             include "chooseplanes.php";
         ?>
@@ -29,15 +29,23 @@
     </head>
     <body>
         <div class="container">
-            <div id="picdiv" style="width: 100%;">
-                <img src="<?= $currentpic ?>" style="width: 100%;">
+            <div id="picdiv" style="height: 70%; text-align:center">
+                <img src="<?= $currentpic ?>" style="max-width:100%; max-height:100%;">
             </div>
             <div id="buttondiv">
                 <form action="index.php" method="post">
-                    <button type="submit" name="button" value="<?= $option1 ?>"><?= $option1 ?></button>
-                    <button type="submit" name="button" value="<?= $option2 ?>"><?= $option2 ?></button>
-                    <button type="submit" name="button" value="<?= $option3 ?>"><?= $option3 ?></button>
-                    <button type="submit" name="button" value="<?= $option4 ?>"><?= $option4 ?></button>
+                    <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary" name="button" value="<?= $option1 ?>" style="width: 100%;"><?= $option1 ?></button>
+                    </div>
+                    <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary" name="button" value="<?= $option2 ?>" style="width: 100%;"><?= $option2 ?></button>
+                    </div>
+                    <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary" name="button" value="<?= $option3 ?>" style="width: 100%;"><?= $option3 ?></button>
+                    </div>
+                    <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary" name="button" value="<?= $option4 ?>" style="width: 100%;"><?= $option4 ?></button>
+                    </div>
                 </form>
             </div>
         </div>
