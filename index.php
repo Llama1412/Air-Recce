@@ -36,6 +36,7 @@
             </div>
             <div id="buttondiv">
                 <form action="index.php" method="post">
+                    <div class="row">
                     <div class="col-md-3">
                     <button type="submit" class="btn btn-primary" name="button" value="<?= $option1 ?>" style="width: 100%;"><?= $option1 ?></button>
                     </div>
@@ -47,6 +48,21 @@
                     </div>
                     <div class="col-md-3">
                     <button type="submit" class="btn btn-primary" name="button" value="<?= $option4 ?>" style="width: 100%;"><?= $option4 ?></button>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary" name="button" value="<?= $option5 ?>" style="width: 100%;"><?= $option5 ?></button>
+                    </div>
+                    <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary" name="button" value="<?= $option6 ?>" style="width: 100%;"><?= $option6 ?></button>
+                    </div>
+                    <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary" name="button" value="<?= $option7 ?>" style="width: 100%;"><?= $option7 ?></button>
+                    </div>
+                    <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary" name="button" value="<?= $option8 ?>" style="width: 100%;"><?= $option8 ?></button>
+                    </div>
                     </div>
                 </form>
             </div>
