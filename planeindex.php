@@ -1,19 +1,16 @@
 <?php
-    $fileSystemIterator = new FilesystemIterator('planes');
+// Navigate to base directory
+$somePath    = 'newPlanes';
+// Find all files in base directory
+$directories = glob($somePath . '/*', GLOB_ONLYDIR);
+// Create array to store arrays for each plane
+$planes      = array();
+// For each folder loop
+foreach ($directories as &$value) {
+    // Get name of plane from folder
+    $planeName = substr($value, 10, strlen($value));
+    $planes[]  = $planeName;
 
-
-    $entries = array();
-    $planes = array();
-    foreach ($fileSystemIterator as $fileInfo){
-        $entries[] = $fileInfo->getFilename();
-    };
-    
-    foreach ($entries as $name) {
-        $edited = substr($name, 0, -4);
-        $planes[] = $edited;
-    };
-
-    $_SESSION["planes"] = array();
-    $_SESSION["planes"] = $planes;
-    ?>
-
+}
+// Return array of all planes
+$_SESSION['planes'] = $planes?>
