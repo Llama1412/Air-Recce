@@ -5,17 +5,22 @@ unset($selection);
 $selection   = array();
 $targno      = rand(0, sizeof($_SESSION["planes"]) - 1);
 $selection[] = $targno;
+
+$result = array_search($targno, array_keys($_SESSION["planes"]));
+
+
+
 while (sizeof($selection) != 8) {
     $generated = rand(0, sizeof($_SESSION["planes"]) - 1);
     if ($generated != $targno) {
         if (!in_array($generated, $selection)) {
             $selection[] = $generated;
-        }
-        ;
-    }
-    ;
-}
-;
+        };
+    };
+};
+
+
+
 shuffle($selection);
 $_SESSION["correctanswer"] = $_SESSION["planes"][$targno];
 

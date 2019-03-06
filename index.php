@@ -1,94 +1,120 @@
 <html>
   <head>
-    <title>Air Recce Trainer
-    </title>
-    <?php
-    include "scoring.php";
-    if (isset($_POST["button"])) {
-        enterAnswer($_POST["button"]);
-        unset($_POST["button"]);
-    }
-    ;
-    include "planeindex.php";
-    include "chooseplanes.php";
-    ?>
+    <title>Air Recce Trainer</title>
+
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="css\style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.18/b-1.5.4/b-html5-1.5.4/b-print-1.5.4/datatables.min.css"/>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.18/b-1.5.4/b-html5-1.5.4/b-print-1.5.4/datatables.min.js"></script>
+
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header" style="padding-left: 2%;">
           <a class="navbar-brand" href="#" style="padding-top: 20%;">Air Recce Trainer
           </a>
         </div>
-        <ul class="nav navbar-nav navbar-right" style="padding-right: 2%; padding-top: 0.3%";>
+        <ul class="nav navbar-nav navbar-right" style="padding-right: 2%; padding-top: 0.3%; padding-bottom: 4.9%";>
           <li>
-            <a href="clearsession.php">
-              <b>Current Score:
-              </b>
-              <p class="text-center" id="score">
-                <?= $_SESSION["score"] ?>/
-                <?= $_SESSION["total"] ?>
-              </p>
-            </a>
           </li>
         </ul>
       </div>
     </nav>
   </head>
-  <body>
+  <body style="font-family: 'Lucida Sans', Arial, sans-serif; font-size: 16px; line-height: 26px;">
     <div class="container">
-      <div id="picdiv" style="height: 70%; text-align:center; padding-bottom: 1em;">
-        <img src="<?= $currentpic ?>" style="max-width:100%; max-height:100%;">
+      <div style="text-align: center;font-family: 'Lato', sans-serif; font-size: 54px; font-weight: 300;">
+        <h1>Oundle Aircraft Recognition Test</h1>
+      </div>
+      <div style="height: 70%; padding-top:20px;">
+        <div class=" mx-auto border rounded py-3 mb-3">
+          <table id="table" class="table table-bordered table-hover" cellspacing="0" width="100%">
+              <thead>
+              <tr>
+                <th width="33%">Name</th>
+                <th width="33%">Score</th>
+                <th width="33%">Date test was taken</th>
+              </tr>
+              </thead>
+              <tr>
+                <td>This</td>
+                <td>isn't</td>
+                <td>finished</td>
+              </tr>
+              <tr>
+                <td>This</td>
+                <td>isn't</td>
+                <td>finished</td>
+              </tr>
+              <tr>
+                <td>This</td>
+                <td>isn't</td>
+                <td>finished</td>
+              </tr>
+              <tr>
+                <td>This</td>
+                <td>isn't</td>
+                <td>finished</td>
+              </tr>
+              <tr>
+                <td>This</td>
+                <td>isn't</td>
+                <td>finished</td>
+              </tr>
+              <tr>
+                <td>This</td>
+                <td>isn't</td>
+                <td>finished</td>
+              </tr>
+              <tr>
+                <td>This</td>
+                <td>isn't</td>
+                <td>finished</td>
+              </tr>
+              <tr>
+                <td>This</td>
+                <td>isn't</td>
+                <td>finished</td>
+              </tr>
+              <tr>
+                <td>This</td>
+                <td>isn't</td>
+                <td>finished</td>
+              </tr>
+              <tr>
+                <td>This</td>
+                <td>isn't</td>
+                <td>finished</td>
+              </tr>
+          </table>
+        </div>
       </div>
       <div id="buttondiv">
-        <form action="index.php" method="post">
-          <div class="row" style='padding-bottom: 1em'>
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary" name="button" value="<?= $option1 ?>" style="width: 100%;">
-                <?= $option1 ?>
-              </button>
-            </div>
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary" name="button" value="<?= $option2 ?>" style="width: 100%;">
-                <?= $option2 ?>
-              </button>
-            </div>
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary" name="button" value="<?= $option3 ?>" style="width: 100%;">
-                <?= $option3 ?>
-              </button>
-            </div>
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary" name="button" value="<?= $option4 ?>" style="width: 100%;">
-                <?= $option4 ?>
-              </button>
-            </div>
-          </div>
+        <form action="testPage.php">
           <div class="row">
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary" name="button" value="<?= $option5 ?>" style="width: 100%;">
-                <?= $option5 ?>
+            <div class="col-md-6">
+              <button type="submit" class="btn btn-primary" name="button" style="width: 100%;">
+                Take a Test
               </button>
             </div>
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary" name="button" value="<?= $option6 ?>" style="width: 100%;">
-                <?= $option6 ?>
-              </button>
-            </div>
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary" name="button" value="<?= $option7 ?>" style="width: 100%;">
-                <?= $option7 ?>
-              </button>
-            </div>
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary" name="button" value="<?= $option8 ?>" style="width: 100%;">
-                <?= $option8 ?>
+        </form>
+        <form action="learnPlanes.php">
+            <div class="col-md-6">
+              <button type="submit" class="btn btn-primary" name="button" style="width: 100%;">
+                Learn Planes
               </button>
             </div>
           </div>
         </form>
       </div>
     </div>
+  <script>
+  $(document).ready( function () {
+    $('#table').DataTable({
+      'dom': 'frtipl',
+    });
+  } );
+  </script>
   </body>
 </html>
